@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Payment Reyz4You Official</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url('https://c.top4top.io/p_35093wumj3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto 40px;
+    background: rgba(0,0,0,0.65);
+    border-radius: 15px;
+    padding: 20px;
+  }
+  .profile {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .profile a {
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid white;
+    overflow: hidden;
+  }
+  .profile img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .nav-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .nav-buttons button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .nav-buttons button:disabled {
+    background-color: #555;
+    cursor: default;
+  }
+  .nav-buttons button:hover:not(:disabled) {
+    background-color: #555;
+  }
+  /* Accordion */
+  .accordion {
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    padding: 14px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+    margin-top: 8px;
+    border-radius: 8px;
+  }
+  .accordion.active, .accordion:hover {
+    background-color: #444;
+  }
+  .panel {
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: none;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+  /* Buttons */
+  .buy-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 8px 8px 0 0;
+    font-weight: bold;
+  }
+  .buy-btn.telegram {
+    background-color: #0088cc;
+  }
+  /* Contact Buttons */
+  .contact-btn {
+    display: inline-block;
+    margin: 12px 12px 24px 0;
+    padding: 12px 22px;
+    background-color: #0077b6;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  .contact-btn:hover,
+  .contact-btn:focus {
+    background-color: #023e8a;
+    outline: none;
+  }
+  #kendala-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #444;
+  }
+  #kendala-section h3 {
+    margin-bottom: 15px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="profile">
+    <a href="https://wa.me/6281260512743" target="_blank" rel="noopener noreferrer" title="Profil WhatsApp">
+      <img src="https://b.top4top.io/p_35084440d5.jpg" alt="Foto Profil" />
+    </a>
+  </div>
+  <h2>Selamat Datang Di Payment Reyz4You Official</h2>
+
+  <div class="nav-buttons" role="tablist" aria-label="Navigasi halaman">
+    <button id="btnPage1" role="tab" aria-selected="true" aria-controls="page1" tabindex="0" disabled>Metode Pembayaran</button>
+    <button id="btnPage2" role="tab" aria-selected="false" aria-controls="page2" tabindex="-1">List Barang & Jasa</button>
+  </div>
+
+  <!-- Halaman 1 -->
+  <div id="page1" role="tabpanel" tabindex="0" aria-labelledby="btnPage1">
+    <button class="accordion">🏦 Bank BRI</button>
+    <div class="panel">
+      Nomor Rekening: <span id="bri-num">Tidak Tersedia</span>
+    </div>
+
+    <button class="accordion">🏦 Bank Mandiri</button>
+    <div class="panel">
+      Nomor Rekening: <span id="mandiri-num">Tidak Tersedia</span>
+    </div>
+
+    <button class="accordion">🏦 Bank BSI</button>
+    <div class="panel">
+      Nomor Rekening: <span id="bsi-num">Tidak Tersedia</span>
+    </div>
+
+    <button class="accordion">📱 Dana</button>
+    <div class="panel">
+      Nomor: <span id="dana-num">082181101556</span>
+    </div>
+
+    <button class="accordion">📱 Gopay</button>
+    <div class="panel">
+      Nomor: <span id="gopay-num">082181101556</span>
+    </div>
+
+    <button class="accordion">📱 OVO</button>
+    <div class="panel">
+      Nomor: <span id="ovo-num">Tidak Tersedia</span>
+    </div>
+
+    <button class="accordion">🛒 ShopeePay</button>
+    <div class="panel">
+      Nomor: <span id="shopeepay-num">Tidak Tersedia</span>
+    </div>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div id="page2" role="tabpanel" tabindex="0" aria-labelledby="btnPage2" hidden>
+    <!-- List Barang & Jasa -->
+    <section id="list-barang-jasa">
+      <button class="accordion">📦 Panel Bot 1 GB</button>
+      <div class="panel">
+        Harga: Rp 1.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 2 GB</button>
+      <div class="panel">
+        Harga: Rp 2.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 3 GB</button>
+      <div class="panel">
+        Harga: Rp 3.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 4 GB</button>
+      <div class="panel">
+        Harga: Rp 4.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 5 GB</button>
+      <div class="panel">
+        Harga: Rp 5.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 6 GB</button>
+      <div class="panel">
+        Harga: Rp 6.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 7 GB</button>
+      <div class="panel">
+        Harga: Rp 7.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 8 GB</button>
+      <div class="panel">
+        Harga: Rp 8.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 9 GB</button>
+      <div class="panel">
+        Harga: Rp 9.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot 10 GB</button>
+      <div class="panel">
+        Harga: Rp 10.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">📦 Panel Bot Unlimited</button>
+      <div class="panel">
+        Harga: Rp12.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Beli via WhatsApp</a>
+        <a href="https://t.me/Reyz4Youu" target="_blank" class="buy-btn telegram">Beli via Telegram</a>
+      </div>
+
+      <button class="accordion">🛠️ Jasa Fix Error Script</button>
+      <div class="panel">
+        Harga: Rp7.000<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Kontak via WhatsApp</a>
+      </div>
+
+      <button class="accordion">🛠️ Jasa Rename</button>
+      <div class="panel">
+        Harga: Rp8.000 Bebas Req<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Kontak via WhatsApp</a>
+      </div>
+
+      <button class="accordion">🛠️ Jasa Addfitur Bot</button>
+      <div class="panel">
+        Harga: Rp2.000 Perfitur<br />
+        <a href="https://wa.me/6281260512743" target="_blank" class="buy-btn">Kontak via WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Jika Ada Kendala -->
+    <section id="kendala-section" aria-label="Bagian Jika Ada Kendala">
+      <h3>Bisa Chat Admin Jika Ada Ada Sesuatu Yang Dia tanyakan</h3>
+      <a href="https://wa.me/6281260512743" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="WhatsApp">
+        📞 WhatsApp
+      </a>
+      <a href="https://t.me/Reyz4Youu" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Telegram">
+        💬 Telegram
+      </a>
+      <a href="https://chat.whatsapp.com/GdyILpaCZNJF9Dpzd9CM7B?mode=ac_t" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="GrubJb">
+       🌐 Grub Hosting
+      </a>
+      <a href="https://whatsapp.com/channel/0029Vb60vCCD38CRalRRga2z" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="Channel">
+        ▶️ Channel
+      </a>
+    </section>
+  </div>
+</div>
+
+<script>
+  // Navigasi halaman
+  const btnPage1 = document.getElementById('btnPage1');
+  const btnPage2 = document.getElementById('btnPage2');
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+
+  btnPage1.addEventListener('click', () => {
+    btnPage1.disabled = true;
+    btnPage1.setAttribute('aria-selected', 'true');
+    btnPage1.tabIndex = 0;
+
+    btnPage2.disabled = false;
+    btnPage2.setAttribute('aria-selected', 'false');
+    btnPage2.tabIndex = -1;
+
+    page1.hidden = false;
+    page2.hidden = true;
+  });
+
+  btnPage2.addEventListener('click', () => {
+    btnPage2.disabled = true;
+    btnPage2.setAttribute('aria-selected', 'true');
+    btnPage2.tabIndex = 0;
+
+    btnPage1.disabled = false;
+    btnPage1.setAttribute('aria-selected', 'false');
+    btnPage1.tabIndex = -1;
+
+    page1.hidden = true;
+    page2.hidden = false;
+  });
+
+  // Accordion functionality
+  const accordions = document.querySelectorAll('.accordion');
+  accordions.forEach(acc => {
+    acc.addEventListener('click', () => {
+      acc.classList.toggle('active');
+      const panel = acc.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+</body>
+</html>
